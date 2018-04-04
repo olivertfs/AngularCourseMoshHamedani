@@ -5,8 +5,14 @@
 </ul>
 
 <!-- bracket interpolation is better for element content binding-->
-<img src="{{imageUrl}}" alt="">
+<!-- <img src="{{imageUrl}}" alt=""> -->
 <!-- Similar with, but preferable for attributes to use property sintax binding-->
-<img [src]="imageUrl" alt="">
+<!-- <img [src]="imageUrl" alt=""> -->
 
-<button class="btn btn-warning">Bootstrap</button>
+<!-- <input (keyup)="onKeyUp($event, userName.value)" type="text" #userName> -->
+<!-- better, with angular sintax -->
+<!-- <input type="text" (keyup.enter)="onKeyUpAngularEnterStyle($event, email.value)" #email> <br> -->
+<!-- two way binding -->
+<input type="text" (keyup.enter)="onKeyUpTwoWayBinding()" [(ngModel)]="email"> <br>
+
+<button class="btn btn-warning" [class.active]="isActive" (click)="onSave($event)">Save</button>
