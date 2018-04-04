@@ -3,3 +3,8 @@
 <ul>
   <li *ngFor="let course of courses">{{course}}</li>
 </ul>
+
+<!-- bracket interpolation is better for element content binding-->
+<img src="{{imageUrl}}" alt="">
+<!-- Similar with, but preferable for attributes to use property sintax binding-->
+<img [src]="imageUrl" alt="">

@@ -9,6 +9,7 @@ import { CourseService } from '../../services/course.service';
 export class CourseComponent implements OnInit {
   title = 'List of courses';
   courses;
+  imageUrl = 'http://lorempixel.com/400/200/';
 
   constructor(service: CourseService) {
     this.courses = service.getCourses();
