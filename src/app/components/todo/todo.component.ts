@@ -21,6 +21,10 @@ export class TodoComponent implements OnInit {
     todo.completed = !todo.completed;
   }
 
+  getCompText(isCompleted: boolean) {
+    return (isCompleted) ? 'Completed' : 'Pending';
+  }
+
 }
 
 interface Todo {

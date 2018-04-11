@@ -1,6 +1,27 @@
-<div class="container">
-  <div *ngFor="let todo of todos" class="jumbotron text-center">
-    <p>{{todo.title}}</p>
-    <span class="glyphicon" [class.glyphicon-star]="todo.completed" [class.glyphicon-star-empty]="!todo.completed" (click)="onCompleted(todo)"></span>
+<div class="article-list">
+  <div class="container">
+    <div class="intro">
+      <h2 class="text-center">Latest Articles</h2>
+      <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.
+        </p>
+    </div>
+    <div class="row articles">
+      <div class="col-md-4 col-sm-6 item" *ngFor="let todo of todos">
+        <a href="#">
+          <img class="img-responsive" src="http://todogroup.org/static/og.png">
+        </a>
+        <h3 class="name">{{todo.title}}}</h3>
+        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam
+          varius finibus est, interdum justo suscipit id.</p>
+        <span href="#" class="action">
+          <i class="glyphicon" [class.glyphicon-star]="todo.completed" [class.glyphicon-star-empty]="!todo.completed" (click)="onCompleted(todo)"></i>
+        </span>
+      </div>
+    </div>
   </div>
 </div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>

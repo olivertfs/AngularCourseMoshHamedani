@@ -12,10 +12,12 @@ import { CourseComponent } from './components/course/course.component';
 import { CourseService } from './services/course.service';
 import { FavouriteComponent } from './components/favourite/favourite.component';
 import { TodoComponent } from './components/todo/todo.component';
+import { ArticleComponent } from './components/article/article.component';
 
 const appRoutes: Routes = [
   {path: '', component: CourseComponent},
-  {path: 'todo', component: TodoComponent}
+  {path: 'todo', component: TodoComponent},
+  {path: 'article', component: ArticleComponent}
 ];
 
 
@@ -25,7 +27,8 @@ const appRoutes: Routes = [
     CourseComponent,
     SummaryPipe,
     FavouriteComponent,
-    TodoComponent
+    TodoComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
