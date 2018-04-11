@@ -4,8 +4,6 @@
   <li *ngFor="let course of courses">{{course}}</li>
 </ul>
 
-<p>Test</p>
-
 <!-- bracket interpolation is better for element content binding-->
 <!-- <img src="{{imageUrl}}" alt=""> -->
 <!-- Similar with, but preferable for attributes to use property sintax binding-->
@@ -15,6 +13,17 @@
 <!-- better, with angular sintax -->
 <!-- <input type="text" (keyup.enter)="onKeyUpAngularEnterStyle($event, email.value)" #email> <br> -->
 <!-- two way binding -->
-<input type="text" (keyup.enter)="onKeyUpTwoWayBinding()" [(ngModel)]="email"> <br>
+<input type="text" (keyup.enter)="onKeyUpTwoWayBinding()" [(ngModel)]="email">
+<br>
 
 <button class="btn btn-warning" [class.active]="isActive" (click)="onSave($event)">Save</button>
+
+<h3>Pipes</h3>
+<p>Title: {{course.title | uppercase}}</p>
+<p>Students: {{course.students | number}}</p>
+<p>Rating: {{course.rating | number:'1.2-2'}}</p>
+<p>Price: {{course.price | currency:'LEI':true}}</p>
+<p>Realease date: {{course.releaseDate | date:'shortDate'}}</p>
+
+<h3>Custom pipes</h3>
+<p>{{text | summary:20}}</p>

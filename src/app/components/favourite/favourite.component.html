@@ -1,0 +1,9 @@
+<div class="favourite-wrapper">
+  <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    alt="">
+  <div>
+    <span class="glyphicon" [class.glyphicon-star]="isFavourite" [class.glyphicon-star-empty]="!isFavourite" (click)="onFavourite()">
+    </span>
+  </div>
+</div>
+<br>

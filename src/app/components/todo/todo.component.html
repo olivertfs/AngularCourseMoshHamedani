@@ -1,0 +1,6 @@
+<div class="container">
+  <div *ngFor="let todo of todos" class="jumbotron text-center">
+    <p>{{todo.title}}</p>
+    <span class="glyphicon" [class.glyphicon-star]="todo.completed" [class.glyphicon-star-empty]="!todo.completed" (click)="onCompleted(todo)"></span>
+  </div>
+</div>
