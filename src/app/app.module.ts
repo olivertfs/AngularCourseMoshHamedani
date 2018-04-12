@@ -13,11 +13,13 @@ import { CourseService } from './services/course.service';
 import { FavouriteComponent } from './components/favourite/favourite.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { ArticleComponent } from './components/article/article.component';
+import { TitlecaseComponent } from './components/titlecase/titlecase.component';
 
 const appRoutes: Routes = [
-  {path: '', component: CourseComponent},
-  {path: 'todo', component: TodoComponent},
-  {path: 'article', component: ArticleComponent}
+  { path: '', component: CourseComponent },
+  { path: 'todo', component: TodoComponent },
+  { path: 'article', component: ArticleComponent },
+  { path: 'titlecase', component: TitlecaseComponent }
 ];
 
 
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
     SummaryPipe,
     FavouriteComponent,
     TodoComponent,
-    ArticleComponent
+    ArticleComponent,
+    TitlecaseComponent
   ],
   imports: [
     BrowserModule,
