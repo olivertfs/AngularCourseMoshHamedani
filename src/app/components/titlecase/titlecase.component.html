@@ -1,5 +1,5 @@
 <div class="margin-top-50">
-  <input type="text" class="form-control" (keyup)="onKeyUp($event)">
+  <input type="text" class="form-control" (keyup)="onKeyUp($event)" [(ngModel)]="title">
   <br>
-  <p>{{textTransformed}}</p>
+  <p>{{title | titleCase}}</p>
 </div>

@@ -14,6 +14,7 @@ import { FavouriteComponent } from './components/favourite/favourite.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { ArticleComponent } from './components/article/article.component';
 import { TitlecaseComponent } from './components/titlecase/titlecase.component';
+import { TitlecasePipe } from './pipes/titlecase.pipe';
 
 const appRoutes: Routes = [
   { path: '', component: CourseComponent },
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     FavouriteComponent,
     TodoComponent,
     ArticleComponent,
-    TitlecaseComponent
+    TitlecaseComponent,
+    TitlecasePipe
   ],
   imports: [
     BrowserModule,

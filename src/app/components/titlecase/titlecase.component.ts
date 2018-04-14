@@ -6,16 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./titlecase.component.css']
 })
 export class TitlecaseComponent implements OnInit {
-  textTransformed = '';
+  title: string;
 
   constructor() { }
 
   ngOnInit() {
   }
-
-  onKeyUp($event) {
-    const text = $event.target.value;
-    this.textTransformed = this.textTransformed.concat(text);
-  }
-
 }
