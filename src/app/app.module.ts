@@ -15,12 +15,15 @@ import { TodoComponent } from './components/todo/todo.component';
 import { ArticleComponent } from './components/article/article.component';
 import { TitlecaseComponent } from './components/titlecase/titlecase.component';
 import { TitlecasePipe } from './pipes/titlecase.pipe';
+import { ReusableComponent } from './components/reusable/reusable.component';
+import { PanelComponent } from './components/panel/panel.component';
 
 const appRoutes: Routes = [
   { path: '', component: CourseComponent },
   { path: 'todo', component: TodoComponent },
   { path: 'article', component: ArticleComponent },
-  { path: 'titlecase', component: TitlecaseComponent }
+  { path: 'titlecase', component: TitlecaseComponent },
+  { path: 'reusable', component: ReusableComponent }
 ];
 
 
@@ -33,7 +36,9 @@ const appRoutes: Routes = [
     TodoComponent,
     ArticleComponent,
     TitlecaseComponent,
-    TitlecasePipe
+    TitlecasePipe,
+    ReusableComponent,
+    PanelComponent
   ],
   imports: [
     BrowserModule,

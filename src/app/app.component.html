@@ -4,4 +4,15 @@
   <a class="btn btn-primary" routerLink="/article">Articles</a>
   <a class="btn btn-primary" routerLink="/titlecase">Titlecase Exercise</a>
 <router-outlet></router-outlet>
+
+<h1>Reusable</h1>
+<app-reusable [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-reusable>
+<br>
+<bootstrap-panel>
+  <ng-container class="heading">Heading</ng-container>
+  <div class="body">
+    <h2>Body</h2>
+    <p>Some content here...</p>
+  </div>
+</bootstrap-panel>
 </div>
