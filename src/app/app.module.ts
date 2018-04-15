@@ -17,6 +17,7 @@ import { TitlecaseComponent } from './components/titlecase/titlecase.component';
 import { TitlecasePipe } from './pipes/titlecase.pipe';
 import { ReusableComponent } from './components/reusable/reusable.component';
 import { PanelComponent } from './components/panel/panel.component';
+import { LikeComponent } from './components/like/like.component';
 
 const appRoutes: Routes = [
   { path: '', component: CourseComponent },
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
     TitlecaseComponent,
     TitlecasePipe,
     ReusableComponent,
-    PanelComponent
+    PanelComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,

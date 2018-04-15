@@ -1,0 +1,12 @@
+.glyphicon{
+    color: #ccc;
+    cursor: pointer;
+}
+
+.active{
+    color: deeppink;
+}
+
+.font-size-50 {
+    font-size: 50px;    
+}
