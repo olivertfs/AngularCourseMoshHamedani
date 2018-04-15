@@ -1,0 +1,19 @@
+<div class="margin-top-50">
+
+  <!-- using ngIf -->
+  <div *ngIf="areCoursesAvailable(); then coursesList else noCourses"></div>
+  <ng-template #coursesList>
+    <h3>List of courses</h3>
+  </ng-template>
+  <ng-template #noCourses>
+    <h3>No courses yet</h3>
+  </ng-template>
+
+  <!--Another approach; using hidden attribute-->
+  <div [hidden]="!areCoursesAvailable()">
+    <h3>List of courses</h3>
+  </div>
+  <div [hidden]="areCoursesAvailable()">
+    <h3>No courses yet</h3>
+  </div>
+</div>

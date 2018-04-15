@@ -18,13 +18,15 @@ import { TitlecasePipe } from './pipes/titlecase.pipe';
 import { ReusableComponent } from './components/reusable/reusable.component';
 import { PanelComponent } from './components/panel/panel.component';
 import { LikeComponent } from './components/like/like.component';
+import { DirectiveComponent } from './components/directive/directive.component';
 
 const appRoutes: Routes = [
   { path: '', component: CourseComponent },
   { path: 'todo', component: TodoComponent },
   { path: 'article', component: ArticleComponent },
   { path: 'titlecase', component: TitlecaseComponent },
-  { path: 'reusable', component: ReusableComponent }
+  { path: 'reusable', component: ReusableComponent },
+  { path: 'directive', component: DirectiveComponent }  
 ];
 
 
@@ -40,7 +42,8 @@ const appRoutes: Routes = [
     TitlecasePipe,
     ReusableComponent,
     PanelComponent,
-    LikeComponent
+    LikeComponent,
+    DirectiveComponent
   ],
   imports: [
     BrowserModule,
