@@ -21,6 +21,7 @@ import { LikeComponent } from './components/like/like.component';
 import { DirectiveComponent } from './components/directive/directive.component';
 import { InputFormatDirective } from './directives/input-format.directive';
 import { ZippyComponent } from './components/zippy/zippy.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 const appRoutes: Routes = [
   { path: '', component: CourseComponent },
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
   { path: 'titlecase', component: TitlecaseComponent },
   { path: 'reusable', component: ReusableComponent },
   { path: 'directive', component: DirectiveComponent },
-  { path: 'zippy', component: ZippyComponent }
+  { path: 'zippy', component: ZippyComponent },
+  { path: 'contact-form', component: ContactFormComponent }
 ];
 
 
@@ -48,7 +50,8 @@ const appRoutes: Routes = [
     LikeComponent,
     DirectiveComponent,
     InputFormatDirective,
-    ZippyComponent
+    ZippyComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
