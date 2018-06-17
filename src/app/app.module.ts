@@ -22,6 +22,7 @@ import { DirectiveComponent } from './components/directive/directive.component';
 import { InputFormatDirective } from './directives/input-format.directive';
 import { ZippyComponent } from './components/zippy/zippy.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { CourseFormComponent } from './components/course-form/course-form.component';
 
 const appRoutes: Routes = [
   { path: '', component: CourseComponent },
@@ -51,7 +52,8 @@ const appRoutes: Routes = [
     DirectiveComponent,
     InputFormatDirective,
     ZippyComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    CourseFormComponent
   ],
   imports: [
     BrowserModule,

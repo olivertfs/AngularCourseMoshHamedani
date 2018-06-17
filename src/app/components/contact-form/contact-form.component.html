@@ -1,14 +1,50 @@
 <div class="margin-top-50">
-    <form>
-        <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input required ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" type="text" class="form-control" id="firstName">
-            <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">First Name is required</div>
+  <form #f="ngForm" (ngSubmit)="submit(f)">
+    <div ngModelGroup="contact">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input required minlength="3" maxlength="10" ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" type="text"
+          class="form-control" id="firstName">
+        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+          <div *ngIf="firstName.errors.required">First Name is required</div>
+          <div *ngIf="firstName.errors.minlength">First name should be minimum {{firstName.errors.minlength.requiredLength}} characters</div>
         </div>
-        <div class="form-group">
-          <label for="comment">Comment</label>
-          <textarea name="" id="comment"></textarea>
-        </div>
-        <button class="btn btn-primary">Submit</button>
-      </form>
+        <label for="lastName">Last Name</label>
+        <input required minlength="3" maxlength="10" ngModel name="lastName" #lastName="ngModel" (change)="log(lastName)" type="text"
+          class="form-control" id="lastName">
+      </div>
+    </div>
+    <div ngModelGroup="comment">
+      <div class="form-group">
+        <label for="comment">Comment</label>
+        <textarea name="" id="comment" ngModel name="comment" #comment="ngModel"></textarea>
+      </div>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ngModel name="isSubscribed"> Subscribe to mailing list
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="contactMethod">Contact Method</label>
+      <!--Pentru a putea selecta mai multe optiuni din dropdown
+        adaugati atributul multiple, si se aplica shift+click pentru selectare-->
+      <select ngModel name="contactMethod" id="contactMethod" class="form-control" required>
+        <option value="">Select contact method</option>
+        <!-- pentru a avea acces la tot obiectul method foloseste [ngValue]="method" in loc de 
+        [value]="method.id" -->
+        <option *ngFor="let method of contactMethods" [value]="method.id">{{method.name}}</option>
+      </select>
+    </div>
+    <div *ngFor="let method of contactMethods" class="radio">
+      <label>
+        <input ngModel type="radio" name="contactMethod" [value]="method.id">
+        {{method.name}}
+      </label>
+    </div>
+    <p>
+      {{ f.value | json }}
+    </p>
+    <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+  </form>
 </div>
