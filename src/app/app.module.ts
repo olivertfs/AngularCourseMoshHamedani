@@ -32,7 +32,8 @@ const appRoutes: Routes = [
   { path: 'reusable', component: ReusableComponent },
   { path: 'directive', component: DirectiveComponent },
   { path: 'zippy', component: ZippyComponent },
-  { path: 'contact-form', component: ContactFormComponent }
+  { path: 'contact-form', component: ContactFormComponent },
+  { path: 'course-form', component: CourseFormComponent }
 ];
 
 
